@@ -6,7 +6,7 @@ JSON Takealot.com API Written in NodeJS, based on Takealot's existing REST API
 
 ## Goals:
 - Search Through Products
-- Find Details about Specific Product
+- Find Details about Specific Product 
 - Check for changes in prices of competitor products (price-matching)
 - Much more
 
