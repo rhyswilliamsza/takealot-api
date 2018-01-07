@@ -2,10 +2,10 @@
   "name": "takealot-api",
   "version": "0.0.1",
   "description": "Frontend Takealot API Written in NodeJS, based on Takealot's existing REST API",
-  "main": "app.js",
+  "main": "api.js",
   "scripts": {
     "preinstall": "npm install supervisor -g",
-    "start": "supervisor app.js",
+    "start": "supervisor api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +20,6 @@
   "homepage": "https://github.com/rhyswilliamsza/takealot-api#readme",
   "dependencies": {
     "cloudscraper": "^1.4.1",
-    "cors": "^2.8.4",
     "express": "^4.16.2"
   }
 }
