@@ -25,7 +25,16 @@ app.listen(9000, function() {
 app.get('/api/search/:search', function(req, res) {
   if (req.params.search) {
     console.log("SEARCH: \"" + req.params.search + "\"");
-    searchProducts(req.params.search, res);
+    searchProducts(req.params.search, res, 50);
+  }
+});
+
+app.get('/api/search/:search/:results', function(req, res) {
+  if (req.params.results >= 199) {
+    res.json({"error":"cannot search more than 199 products at once"});
+  } else if (req.params.search) {
+    console.log("SEARCH: \"" + req.params.search + "\"");
+    searchProducts(req.params.search, res, req.params.results);
   }
 });
 
@@ -39,8 +48,8 @@ app.get('/api/product/:skuid', function(req, res) {
  * Individual API functions
  */
 
-function searchProducts(name, res) {
-  cloudscraper.get('https://api.takealot.com/rest/v-1-6-0/productlines/search?sort=Default%20Descending&rows=50&start=0&detail=mlisting&qsearch=' + name, function(error, response, body) {
+function searchProducts(name, res, items) {
+  cloudscraper.get('https://api.takealot.com/rest/v-1-6-0/productlines/search?sort=Default%20Descending&rows=' + items + '&start=0&detail=mlisting&qsearch=' + name, function(error, response, body) {
     if (error) {
       res.json(JSON.stringify("An Error Occured"));
     } else {
