@@ -6,7 +6,7 @@ JSON Takealot.com API Written in NodeJS, based on Takealot's existing REST API
 
 ## Goals:
 - Search Through Products
-- Find Details about Specific Product 
+- Find Details about Specific Product
 - Check for changes in prices of competitor products (price-matching)
 - Much more
 
@@ -16,7 +16,7 @@ staff to do price-matching. Why not do this automatically?
 ## Usage
 Clone this repo, then run 'npm install'. To start server, 'npm start'.
 
-Now, visit http://127.0.0.1:9000/api/...
+Now, visit http://127.0.0.1:9001/api/...
 
  - .../search/name_here to search through Products
  - .../product/skuid_here to select a product (sku_id can be found through search)

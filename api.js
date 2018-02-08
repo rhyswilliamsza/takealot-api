@@ -18,8 +18,8 @@ var timeout = 3600; //timeout in seconds
  * Server Configuration & Listener Setup
  */
 
-app.listen(9000, function() {
-  console.log('Running API on 0.0.0.0:9000/api');
+app.listen(9001, function() {
+  console.log('Running API on 0.0.0.0:9001/api');
 });
 
 app.get('/api/search/:search', function(req, res) {
